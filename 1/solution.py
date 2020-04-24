@@ -6,7 +6,7 @@ class Solution:
         p = {}
         for i, j in enumerate(nums):
             n = t - j
-            if p.__contains__(n): # https://stackoverflow.com/a/52885215/8144980
+            if p.__contains__(n):
                 return [p[n], i]
-            p[v] = i
+            p[j] = i
         return None
