@@ -1,11 +1,12 @@
-# Runtime: 5920 ms
-# Memory Usage: 14.8 MB
+# Runtime: 44 ms
+# Memory Usage: 15.2 MB
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        p = len(nums)
-        for i in range(p):
-            n = i + 1
-            for j in range(n, p):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
+        p = {}
+        for i, num in enumerate(nums):
+            n = target - num
+            if n not in p:
+                p[num] = i
+            else:
+                return [p[n], i]
