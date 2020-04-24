@@ -36,10 +36,8 @@ def main():
                 code = f.read()
                 f.close()
             content += "- [{}]({})\n```\n{}\n```\n\n".format(name, path, code)
-        content += "\n"
-
-        with open(category + "/README.md", "w") as fd:
-            fd.write(content)
+            with open(category + "/README.md", "w") as fd:
+                fd.write(content)
 
 
 if __name__ == "__main__":
