@@ -31,8 +31,11 @@ def main():
 
         for file in files:
             name = os.path.basename(file).split('.')[1]
-            # name = " ".join(word.lower() for word in name.split('-'))
-            content += "- [{}]({})\n".format(name, os.path.join(category, file))
+            path = os.path.join(category, file)
+            with open(path) as f:
+                code = f.read()
+                f.close()
+            content += "- [{}]({})\n```{}```\n\n".format(name, path, code)
         content += "\n"
 
     with open("README.md", "w") as fd:
