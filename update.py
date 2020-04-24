@@ -31,6 +31,8 @@ def main():
 
         for file in files:
             name = os.path.basename(file).split('.')[1]
+            if name == 'md':
+                continue
             path = os.path.join(category, file)
             with open(path) as f:
                 code = f.read()
