@@ -35,7 +35,7 @@ def main():
             with open(path) as f:
                 code = f.read()
                 f.close()
-            content += "- [{}]({})\n```{}```\n\n".format(name, path, code)
+            content += "- [{}]({})\n```\n{}\n```\n\n".format(name, path, code)
         content += "\n"
 
         with open(category + "/README.md", "w") as fd:
