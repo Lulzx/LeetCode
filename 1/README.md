@@ -7,18 +7,18 @@
 
 - [py](1/solution.py)
 ```
-# Runtime: 44 ms
-# Memory Usage: 15.2 MB
+# Runtime: 36 ms
+# Memory Usage: 15.1 MB
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: List[int], t: int) -> List[int]:
         p = {}
-        for i, num in enumerate(nums):
-            n = target - num
-            if n not in p:
-                p[num] = i
-            else:
+        for i, j in enumerate(nums):
+            n = t - j
+            if p.__contains__(n): # https://stackoverflow.com/a/52885215/8144980
                 return [p[n], i]
+            p[v] = i
+        return None
 
 ```
 
