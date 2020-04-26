@@ -5,8 +5,6 @@
 
 ### Problem 1:
 
-### Problem 1:
-
 - [py](1/solution.py)
 ```
 # Runtime: 36 ms
@@ -23,8 +21,6 @@ class Solution:
         return None
 
 ```
-
-### Problem 1:
 
 - [js](1/solution.js)
 ```
@@ -43,8 +39,6 @@ var twoSum = function(nums, target) {
 };
 
 ```
-
-### Problem 1:
 
 - [java](1/solution.java)
 ```
