@@ -24,12 +24,13 @@ def main():
                 except ValueError:
                     pass
             continue
-            
+
+        category = os.path.basename(root)
+
+        content += "### Problem {}:\n\n".format(category)
 
         for file in files:
             name = os.path.basename(file).split('.')[1]
-            category = os.path.basename(root)
-            content += "### Problem {}:\n\n".format(category)
             if name == 'md':
                 continue
             path = os.path.join(category, file)
